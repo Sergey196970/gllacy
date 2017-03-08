@@ -146,6 +146,7 @@ body {
   vertical-align: top;
   float: left;
   margin-left: 0px;
+  padding-bottom: 20px;
   vertical-align: top;
 }
 
@@ -262,7 +263,13 @@ body {
   display: none;
 }
 
-.btn-search:hover + .header-search {
+.search-wrapper {
+  width: 33px;
+  float: right;
+  padding-bottom: 20px;
+}
+
+.search-wrapper:hover > .header-search {
   position: absolute;
   display: block;
   top: 36px;
@@ -366,7 +373,14 @@ body {
   display: none;
 }
 
-.btn-enter:hover + .header-enter {
+.user-wrapper,
+.cart-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 20px;
+}
+
+.user-wrapper:hover > .header-enter {
   position: absolute;
   display: block;
   top: 36px;
