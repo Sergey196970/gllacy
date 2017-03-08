@@ -264,7 +264,13 @@ body {
   display: none;
 }
 
-.search:hover > .header-search {
+.search-wrapper {
+  width: 33px;
+  float: right;
+  padding-bottom: 20px;
+}
+
+.search-wrapper:hover > .header-search {
   position: absolute;
   display: block;
   top: 36px;
