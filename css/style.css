@@ -146,6 +146,7 @@ body {
   vertical-align: top;
   float: left;
   margin-left: 0px;
+  padding-bottom: 20px;
   vertical-align: top;
 }
 
@@ -155,7 +156,8 @@ body {
   color: #000;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:active .dropdown-menu {
   display: block;
 }
 
@@ -222,7 +224,7 @@ body {
   float: left;
   width: 330px;
   margin-left: 23px;
-  padding-bottom: 8px;
+  padding-bottom: 28px;
 }
 
 .btn-search {
@@ -262,7 +264,7 @@ body {
   display: none;
 }
 
-.btn-search:hover + .header-search {
+.search:hover > .header-search {
   position: absolute;
   display: block;
   top: 36px;
@@ -366,7 +368,14 @@ body {
   display: none;
 }
 
-.btn-enter:hover + .header-enter {
+.user-wrapper,
+.cart-wrapper {
+  display: inline-block;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+.user-wrapper:hover > .header-enter {
   position: absolute;
   display: block;
   top: 36px;
