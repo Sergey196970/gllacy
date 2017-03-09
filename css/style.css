@@ -611,10 +611,6 @@ body {
   background-position: -95px -10px;
 }
 
-.index-hit .index-cream:hover {
-  
-}
-
 /* конец Хит */
 /* О магазине */
 
@@ -748,7 +744,7 @@ body {
 }
 
 .news-input {
-  width: 350px;
+  width: 340px;
   padding: 8px;
   font-weight: 400;
   line-height: 24.3px;
@@ -784,6 +780,7 @@ body {
 
 .btn-news {
   margin-left: 8px;
+  margin-top: -2px;
   padding: 13px 21px;
   border-radius: 22px;
 }
@@ -831,10 +828,20 @@ body {
 }
 
 .btn-map {
-  margin: 4px auto;
-  padding: 14px 35px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: block;
+  width: 250px;
+  height: 44px;
+  line-height: 44px;
   border-radius: 22px;
   color: #fff;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 /* конец Карта и Основная часть */
@@ -1299,10 +1306,11 @@ body {
   display: block;
 }
 
-.catalog-page .index-img {
+.index-img {
   width: 267px;
   height: 267px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
  .btn-catalog {
@@ -1564,29 +1572,60 @@ body {
 /* Всплывающая форма обратной связи. */
 
 .common {
-  display: none;
-  position: absolute;
-  top: 25%;
-  left: 25%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 430px;
+  z-index: 20;
   padding: 19px 24px;
   background-color: rgb(248,247,244);
   border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.common,
+.common-overlay {
+  display: none;
 }
 
-.common-exit {
+.common-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+
+.common-error {
+  animation: shake 0.6s;
+}
+
+.common-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.common-close {
   position: absolute;
   text-outline: 10px;
   right: 20px;
+  z-index: 30;
   width: 20px;
   height: 20px;
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.common-exit::before,
-.common-exit::after {
+.common-close::before,
+.common-close::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -1596,13 +1635,13 @@ body {
   background-color: rgba(0,0,0,.5);
 }
 
-.common-exit::before {
+.common-close::before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.common-exit::after {
+.common-close::after {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -1652,6 +1691,12 @@ body {
   border: 2px solid #c7c6c5;
 }
 
+.name-input:visited + .name-input-label,
+.email-input:visited + .email-input-label,
+.text-input:visited + .text-input-label {
+  display: none;
+}
+
 .common-form button {
   float: right;
   padding: 10px 23px;
@@ -1699,6 +1744,10 @@ body {
 
 .text-input:focus + .text-input-label {
   top: 101px;
+}
+
+.label-hide {
+  display: none;
 }
 
 
