@@ -3,7 +3,6 @@
     var openOverlay = document.querySelector(".common-overlay");
     var close = popup.querySelector(".common-close");
     var name = popup.querySelector("[name-input]");
-    var nameLab = popup.querySelector(".name-input-label")
     var email = popup.querySelector("[email-input]");
     var message = popup.querySelector("[text-input]");
     var form = popup.querySelector("form");
@@ -21,11 +20,6 @@
         }
     });
 
-    name.addEventListener("change", function(event) {
-            event.preventDefault();
-            nameLab.classList.add("label-hide");
-    });   
-    
     close.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.remove("common-content-show");

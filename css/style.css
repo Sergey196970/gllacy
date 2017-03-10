@@ -1684,17 +1684,12 @@ body {
   border: 1px solid #d3d3d2;
   border-radius: 3px;
   color: #9b9b9b;
+  resize: none;
 }
 
 .text-input:hover {
   padding: 8px 11px;
   border: 2px solid #c7c6c5;
-}
-
-.name-input:visited + .name-input-label,
-.email-input:visited + .email-input-label,
-.text-input:visited + .text-input-label {
-  display: none;
 }
 
 .common-form button {
@@ -1712,7 +1707,7 @@ body {
   width: 190px;
   font-weight: 400;
   line-height: 24.3px;
-  color: #c7c6c5;
+  color: transparent;
 }
 
 .name-input + .name-input-label {
